@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "logs" {
-  bucket        = "${var.cloudtrail_logs}"
+  bucket        = var.cloudtrail_logs
   force_destroy = true
 
   policy = <<POLICY
@@ -32,9 +32,11 @@ resource "aws_s3_bucket" "logs" {
     ]
 }
 POLICY
+
 }
 
 resource "aws_s3_bucket" "reports" {
-  bucket        = "${var.cloudtrail_reports}"
+  bucket = var.cloudtrail_reports
   force_destroy = true
 }
+

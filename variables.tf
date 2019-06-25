@@ -1,9 +1,15 @@
-variable "db_name" {}
+variable "db_name" {
+}
 
-variable "table_name" {}
+variable "table_name" {
+}
 
-variable cloudtrail_logs {}
+variable "cloudtrail_logs" {
+}
 
-variable cloudtrail_reports {}
+variable "cloudtrail_reports" {
+}
 
-variable "create_saved_query" {}
+variable "create_saved_query" {
+}
+
